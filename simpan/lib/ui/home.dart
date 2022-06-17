@@ -19,112 +19,117 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => AddCategory()));
-          },
-          backgroundColor: Color(0xff4B0082),
-          child: Icon(
-            Icons.add,
-            size: 28,
-          ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => AddCategory()));
+        },
+        backgroundColor: enam,
+        child: Icon(
+          Icons.add,
+          size: 28,
         ),
-        //floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      ),
+      //floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
 
-        appBar: AppBar(
-          //leading: 
-          automaticallyImplyLeading: false,
-          title: Text('Simpan'),
-          actions: [
-            IconButton(
-              onPressed: (){
-                Navigator.push(
-                  context, MaterialPageRoute (
-                    builder: (context) => profile()
-                  )
-                );
-              }, 
-              icon: Icon(Icons.account_circle)
-            )
-          ],
-          backgroundColor: tiga,
-        ),
+      appBar: AppBar(
+        //leading:
+        //automaticallyImplyLeading: false,
+        title: Text('Simpan'),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => profile()));
+              },
+              icon: Icon(Icons.account_circle))
+        ],
+        backgroundColor: tiga,
+      ),
 
-        body: SafeArea(
-          child: ListView(
-            children: [
-              Column(
-                children: [
-                  SizedBox(
-                    height: 25,
-                  ),
-                  Row(
+      drawer: Drawer(
+        backgroundColor: enam,
+        child: Center(
+            child: Text(
+          'Test Drawer Widget',
+          style: huruf7.copyWith(color: dua, fontSize: 20),
+        )),
+      ),
+
+      body: SafeArea(
+        child: ListView(
+          children: [
+            Column(
+              children: [
+                SizedBox(
+                  height: 25,
+                ),
+                Row(
+                  children: [
+                    //SizedBox(width: 3,),
+                    Image.asset(
+                      'assets/scan.png',
+                      height: 215,
+                      width: 215,
+                    ),
+                    SizedBox(
+                      width: 0,
+                    ),
+                    Text(
+                      'Save Your Data \nHere!',
+                      textAlign: TextAlign.center,
+                      style:
+                          TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+                    )
+                  ],
+                ),
+                //SizedBox(height: 5,),
+                Padding(
+                  padding: const EdgeInsets.only(left: 28),
+                  child: Row(
                     children: [
-                      //SizedBox(width: 3,),
-                      Image.asset(
-                        'assets/scan.png',
-                        height: 215,
-                        width: 215,
-                      ),
-                      SizedBox(
-                        width: 0,
-                      ),
                       Text(
-                        'Save Your Data \nHere!',
-                        textAlign: TextAlign.center,
+                        'Data Category',
                         style: TextStyle(
-                            fontWeight: FontWeight.w600, fontSize: 18),
-                      )
+                            fontSize: 16, fontWeight: FontWeight.w700),
+                      ),
                     ],
                   ),
-                  //SizedBox(height: 5,),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 28),
-                    child: Row(
-                      children: [
-                        Text(
-                          'Data Category',
-                          style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.w700),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  //panggil class di sini
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                //panggil class di sini
 
-                  Option(
-                    title: "Food",
-                    press: () {
-                      Navigator.push(context, MaterialPageRoute(
-                        builder: (context) {
-                          return foof();
-                        },
-                      ));
-                    },
-                  ),
-                  Option(
-                    title: "Drink",
-                    press: () {
-                      // Navigator.push(context, MaterialPageRoute(
-                      //   builder: (context) {
-                      //     return foof();
-                      //   },
-                      // ));
-                    },
-                  ),
-                  Option(title: 'Soap', press: () {}),
-                  Option(title: 'Groceries', press: () {}),
-                  Option(title: 'More data', press: () {}),
-                ],
-              ),
-            ],
-          ),
+                Option(
+                  title: "Food",
+                  press: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return foof();
+                      },
+                    ));
+                  },
+                ),
+                Option(
+                  title: "Drink",
+                  press: () {
+                    // Navigator.push(context, MaterialPageRoute(
+                    //   builder: (context) {
+                    //     return foof();
+                    //   },
+                    // ));
+                  },
+                ),
+                Option(title: 'Soap', press: () {}),
+                Option(title: 'Groceries', press: () {}),
+                Option(title: 'More data', press: () {}),
+              ],
+            ),
+          ],
         ),
-      );
+      ),
+    );
   }
 }
 
@@ -180,41 +185,60 @@ class Option extends StatelessWidget {
 }
 
 Widget _buildDrawer() {
-      return SizedBox(
-        //membuat menu drawer
-        child: Drawer(
-          //membuat list, 
-          //list digunakan untuk melakukan scrolling jika datanya terlalu panjang
-          child: ListView(
-            padding: EdgeInsets.zero,
-            //di dalam listview ini terdapat beberapa widget drawable
-            children: [
-              UserAccountsDrawerHeader(
-                //membuat gambar profil
-                currentAccountPicture: Image(
-                  image: NetworkImage("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png")
-                ),
-                //membuat nama akun
-                accountName: Text("Sahretech"), 
-                //membuat nama email
-                accountEmail: Text("ig: @sahretech"),
-                //memberikan background
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: NetworkImage("https://cdn.pixabay.com/photo/2016/04/24/20/52/laundry-1350593_960_720.jpg"), 
-                    fit: BoxFit.cover
-                  )
-                ),
-              ), 
-              //membuat list menu
-              ListTile( leading: Icon(Icons.home), title: Text("Beranda"), onTap: (){},),
-              ListTile( leading: Icon(Icons.people), title: Text("Pegawai"), onTap: (){},), 
-              ListTile( leading: Icon(Icons.money), title: Text("Transaksi"), onTap: (){},), 
-              Divider(),
-              ListTile( leading: Icon(Icons.emoji_emotions), title: Text("Profil"), onTap: (){},), 
-              ListTile( leading: Icon(Icons.info), title: Text("Tentang"), onTap: (){},), 
-            ],
+  return SizedBox(
+    //membuat menu drawer
+    child: Drawer(
+      //membuat list,
+      //list digunakan untuk melakukan scrolling jika datanya terlalu panjang
+      child: ListView(
+        padding: EdgeInsets.zero,
+        //di dalam listview ini terdapat beberapa widget drawable
+        children: [
+          UserAccountsDrawerHeader(
+            //membuat gambar profil
+            currentAccountPicture: Image(
+                image: NetworkImage(
+                    "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png")),
+            //membuat nama akun
+            accountName: Text("Sahretech"),
+            //membuat nama email
+            accountEmail: Text("ig: @sahretech"),
+            //memberikan background
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage(
+                        "https://cdn.pixabay.com/photo/2016/04/24/20/52/laundry-1350593_960_720.jpg"),
+                    fit: BoxFit.cover)),
           ),
-        ),
-      );
-    }
+          //membuat list menu
+          ListTile(
+            leading: Icon(Icons.home),
+            title: Text("Beranda"),
+            onTap: () {},
+          ),
+          ListTile(
+            leading: Icon(Icons.people),
+            title: Text("Pegawai"),
+            onTap: () {},
+          ),
+          ListTile(
+            leading: Icon(Icons.money),
+            title: Text("Transaksi"),
+            onTap: () {},
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.emoji_emotions),
+            title: Text("Profil"),
+            onTap: () {},
+          ),
+          ListTile(
+            leading: Icon(Icons.info),
+            title: Text("Tentang"),
+            onTap: () {},
+          ),
+        ],
+      ),
+    ),
+  );
+}

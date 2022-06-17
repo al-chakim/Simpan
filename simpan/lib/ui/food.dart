@@ -34,7 +34,7 @@ class _foofState extends State<foof> {
             )
           );
         },
-        backgroundColor: Color(0xff4B0082),
+        backgroundColor: enam,
         child: Icon(
           Icons.add,
           size: 28,

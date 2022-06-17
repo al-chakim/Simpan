@@ -6,6 +6,7 @@ Color tiga = Color(0xff4B0082);
 Color empat = Color(0xffFA0000);
 Color lima = Color(0xffDDDDDD);
 Color enam = Color.fromARGB(255, 176, 66, 255);
+Color tujuh = Color.fromARGB(255, 224, 180, 255);
 
 TextStyle huruf1 = TextStyle(
   //color: satu

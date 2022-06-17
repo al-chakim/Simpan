@@ -16,6 +16,7 @@ class _StartedState extends State<Started> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //backgroundColor: tujuh,
       body: SafeArea(
         child: ListView(
           children: [
@@ -73,7 +74,7 @@ class _StartedState extends State<Started> {
                     color: Colors.transparent,
                     child: InkWell(
                       onTap: () {
-                        Navigator.pushReplacement(context,
+                        Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
                           return login();
                         }));

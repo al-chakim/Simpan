@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:simpan/style/theme.dart';
@@ -17,7 +16,7 @@ class _SplashState extends State<Splash> {
     Timer(
       Duration(seconds: 5),
       (){
-        Navigator.pushNamed(context, '/Started');
+        Navigator.pushReplacementNamed(context, '/Started');
       }
     );
     super.initState();
@@ -26,7 +25,7 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: tujuh,
+      //backgroundColor: tujuh,
       body: Center(
         child: Column(
           children: [

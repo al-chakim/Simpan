@@ -64,7 +64,7 @@ class _DaftarState extends State<Daftar> {
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 20),
+                        padding: const EdgeInsets.only(left: 30),
                         child: Text('Creat your account', style: huruf3,),
                       ),
                     ],

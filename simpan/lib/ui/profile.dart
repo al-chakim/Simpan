@@ -47,7 +47,7 @@ class _profileState extends State<profile> {
                         )
                       ),
                     SizedBox(height: 2,),
-                    Text('065119167'),
+                    //Text('065119167'),
                     SizedBox(height: 2,),
                     Text('Simpan@simpan.co.id')
                   ],

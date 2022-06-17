@@ -64,11 +64,11 @@ class _loginState extends State<login> {
                   //   height: 50,
                   // ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                        height: 40,
-                        width: 150,
+                        height: 45,
+                        width: 160,
                         //padding: EdgeInsets.only(left: 20, top: 6),
                         margin: EdgeInsets.only(
                             //right: 20,
@@ -101,8 +101,8 @@ class _loginState extends State<login> {
                         ),
                       ),
                       Container(
-                        height: 40,
-                        width: 150,
+                        height: 45,
+                        width: 160,
                         //padding: EdgeInsets.only(left: 20, top: 6),
                         margin: EdgeInsets.only(
                             right: 20,

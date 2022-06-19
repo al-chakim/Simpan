@@ -30,7 +30,7 @@ class _DaftarState extends State<Daftar> {
                       )
                     ],
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(height: 10,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

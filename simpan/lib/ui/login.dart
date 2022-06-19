@@ -22,7 +22,7 @@ class _loginState extends State<login> {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 100,
+                    height: 70,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -67,8 +67,8 @@ class _loginState extends State<login> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                        height: 45,
-                        width: 160,
+                        height: 40,
+                        width: 150,
                         //padding: EdgeInsets.only(left: 20, top: 6),
                         margin: EdgeInsets.only(
                             //right: 20,
@@ -101,8 +101,8 @@ class _loginState extends State<login> {
                         ),
                       ),
                       Container(
-                        height: 45,
-                        width: 160,
+                        height: 40,
+                        width: 150,
                         //padding: EdgeInsets.only(left: 20, top: 6),
                         margin: EdgeInsets.only(
                             right: 20,

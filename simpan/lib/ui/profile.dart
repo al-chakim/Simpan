@@ -52,7 +52,7 @@ class _profileState extends State<profile> {
                     Text('Simpan@simpan.co.id')
                   ],
                 ),
-                SizedBox(width: 115,),
+                SizedBox(width: 87,),
                 Column(
                   children: [
                     IconButton(onPressed: (){}, icon: Icon(Icons.edit))
@@ -91,7 +91,7 @@ class _profileState extends State<profile> {
                     ),
                     //Text('Cek riwayat & catatan terakhir', style: TextStyle(fontSize: 13),),
                     SizedBox(
-                      width:50,
+                      width:20,
                     ),
                     Icon(
                       Icons.arrow_forward_ios,
@@ -118,7 +118,7 @@ class _profileState extends State<profile> {
                     ),
                     //Text('Cek riwayat & pesanan aktif'),
                     SizedBox(
-                      width: 133,
+                      width: 103,
                     ),
                     Icon(
                       Icons.arrow_forward_ios,
@@ -145,7 +145,7 @@ class _profileState extends State<profile> {
                     ),
                     //Text('Cek riwayat & pesanan aktif'),
                     SizedBox(
-                      width: 88
+                      width: 57
                     ),
                     Icon(
                       Icons.arrow_forward_ios,
@@ -172,7 +172,7 @@ class _profileState extends State<profile> {
                     ),
                     //Text('Cek riwayat & pesanan aktif'),
                     SizedBox(
-                      width: 202,
+                      width: 170,
                     ),
                     Icon(
                       Icons.arrow_forward_ios,
@@ -199,7 +199,7 @@ class _profileState extends State<profile> {
                     ),
                     //Text('Cek riwayat & pesanan aktif'),
                     SizedBox(
-                      width: 110,
+                      width: 79,
                     ),
                     Icon(
                       Icons.arrow_forward_ios,

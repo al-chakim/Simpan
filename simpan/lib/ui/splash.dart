@@ -25,7 +25,7 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: tujuh,
+      backgroundColor: tiga,
       body: Center(
         child: Column(
           children: [
@@ -35,7 +35,7 @@ class _SplashState extends State<Splash> {
             Image.asset(
               'assets/sp1.png',
               height: 230,
-              color: tiga,
+              color: dua,
             ),
             SizedBox(
               height: 20,
@@ -44,7 +44,7 @@ class _SplashState extends State<Splash> {
               'S I M P A N',
               style: huruf4.copyWith(
                 fontSize: 30, 
-                color: tiga, 
+                color: dua, 
                 fontWeight: FontWeight.w800
               ),
             )

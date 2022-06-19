@@ -24,7 +24,10 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => AddCategory()));
+            context, MaterialPageRoute(
+              builder: (context) => AddCategory()
+            )
+          );
         },
         backgroundColor: enam,
         child: Icon(
@@ -38,24 +41,170 @@ class _HomePageState extends State<HomePage> {
         //leading:
         //automaticallyImplyLeading: false,
         title: Text('Simpan'),
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => profile()));
-              },
-              icon: Icon(Icons.account_circle))
-        ],
+        // actions: [
+        //   IconButton(
+        //       onPressed: () {
+        //         // Navigator.push(context,
+        //         //     MaterialPageRoute(builder: (context) => profile()));
+        //       },
+        //       icon: Icon(Icons.account_circle))
+        // ],
         backgroundColor: tiga,
       ),
 
       drawer: Drawer(
-        backgroundColor: enam,
-        child: Center(
-            child: Text(
-          'Test Drawer Widget',
-          style: huruf7.copyWith(color: dua, fontSize: 20),
-        )),
+        backgroundColor: tujuh,
+        child: SafeArea(
+          child: Column(
+            children: [
+              Container(
+                color: enam,
+                width: double.infinity,
+                //height: 70,
+                padding: EdgeInsets.all(10),
+                //margin: EdgeInsets.only(bottom: 5, top: 5),
+                child: Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CircleAvatar(
+                          radius: 35,
+                          backgroundImage: AssetImage('assets/profile.png'),
+                        ),
+                        SizedBox(height: 10,),
+                        Text(
+                          'Al Chakim', 
+                          style: huruf2.copyWith(
+                            color: dua
+                          ),
+                        ),
+                        Text(
+                          '085775190991',
+                          style: huruf2.copyWith(
+                            fontWeight: FontWeight.w400,
+                            color: dua,
+                            fontSize: 14
+                          ),
+                        ),
+                        Text(
+                          'amrualchakim@gmail.com',
+                          style: huruf2.copyWith(
+                            fontWeight: FontWeight.w400,
+                            color: dua,
+                            fontSize: 14
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 68,),
+                    Column(
+                      children: [
+                        IconButton(
+                          onPressed: (){}, 
+                          icon: Icon(
+                            Icons.wb_sunny_outlined,
+                            color: dua,
+                          )
+                        ),
+                        SizedBox(height: 65,),
+                        Icon(
+                          Icons.arrow_drop_down,
+                          color: dua,
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                onTap: (){},
+                title: Row(
+                  // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(Icons.fact_check),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text('Catatan'),
+                  ],
+                ),
+              ),
+              ListTile(
+                onTap: (){},
+                title: Row(
+                  // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(Icons.notifications),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text('Notifikasi'),
+                  ],
+                ),
+              ),
+              ListTile(
+                onTap: (){},
+                title: Row(
+                  // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(Icons.settings),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text('Pengaturan'),
+                  ],
+                ),
+              ),
+              ListTile(
+                onTap: (){},
+                title: Row(
+                  // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(Icons.link),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text('Atur akun'),
+                  ],
+                ),
+              ),
+              ListTile(
+                onTap: (){},
+                title: Row(
+                  // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(Icons.security_sharp),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text('Kebijakan Privasi'),
+                  ],
+                ),
+              ),
+              Divider(
+                thickness: 1,
+                height: 1.5,
+                indent: 0,
+                endIndent: 0,
+                color: Colors.white,
+              ),
+              ListTile(
+                onTap: (){},
+                title: Row(
+                  // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(Icons.help_outline),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text('Fitur Simpan'),
+                  ],
+                ),
+              ),
+            ],
+          )
+        )
       ),
 
       body: SafeArea(

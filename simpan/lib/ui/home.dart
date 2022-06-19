@@ -41,14 +41,15 @@ class _HomePageState extends State<HomePage> {
         //leading:
         //automaticallyImplyLeading: false,
         title: Text('Simpan'),
-        // actions: [
-        //   IconButton(
-        //       onPressed: () {
-        //         // Navigator.push(context,
-        //         //     MaterialPageRoute(builder: (context) => profile()));
-        //       },
-        //       icon: Icon(Icons.account_circle))
-        // ],
+        actions: [
+          IconButton(
+            onPressed: () {
+              // Navigator.push(context,
+              //     MaterialPageRoute(builder: (context) => profile()));
+            },
+            icon: Icon(Icons.search)
+          )
+        ],
         backgroundColor: tiga,
       ),
 
